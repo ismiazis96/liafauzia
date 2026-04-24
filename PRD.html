@@ -1,0 +1,164 @@
+from weasyprint import HTML
+
+# Content for the Final PRD in Indonesian
+html_content = """
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 15mm;
+            background-color: #f4f7f6;
+        }
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.5;
+            color: #2c3e50;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .header {
+            border-bottom: 4px solid #3498db;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+        }
+        h1 { color: #2c3e50; font-size: 22pt; margin: 0; }
+        .subtitle { color: #7f8c8d; font-size: 11pt; margin-top: 5px; }
+        
+        h2 { 
+            color: #2980b9; 
+            font-size: 15pt; 
+            margin-top: 25px; 
+            border-left: 5px solid #2980b9; 
+            padding-left: 12px;
+        }
+        h3 { color: #34495e; font-size: 12pt; margin-top: 15px; }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 10pt;
+        }
+        th, td {
+            border: 1px solid #dfe6e9;
+            padding: 12px;
+            text-align: left;
+        }
+        th { background-color: #3498db; color: white; }
+        tr:nth-child(even) { background-color: #f9f9f9; }
+
+        .tech-box {
+            background-color: #e8f4fd;
+            border: 1px dashed #3498db;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        .badge {
+            display: inline-block;
+            background: #27ae60;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 9pt;
+            font-weight: bold;
+        }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 5px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Product Requirements Document (PRD)</h1>
+            <p class="subtitle">Personal Branding Platform: Lia Fauziyyah A., S.H., M.H.</p>
+        </div>
+
+        <h2>1. Ringkasan Eksekutif</h2>
+        <p>Membangun website portofolio profesional untuk merepresentasikan tiga peran utama: <strong>Akademisi (Dosen)</strong>, <strong>MC Profesional</strong>, dan <strong>Research Assistant</strong>. Website ini berfungsi sebagai kartu nama digital dan platform penjualan jasa mentoring.</p>
+
+        <h2>2. Struktur Halaman & Konten</h2>
+        <ul>
+            <li><strong>Home:</strong> Hero section dengan visual branding yang kuat dan ringkasan profil.</li>
+            <li><strong>About:</strong> Biografi profesional dan riwayat pendidikan hukum (S1 & S2).</li>
+            <li><strong>Services & Pricing:</strong> Menu jasa utama (Mentoring & MC).</li>
+            <li><strong>Experience:</strong> Portofolio berbasis teks (Riwayat mengajar, judul penelitian, dan daftar event MC).</li>
+            <li><strong>Contact:</strong> Integrasi formulir kontak dan tombol WhatsApp.</li>
+        </ul>
+
+        <h2>3. Daftar Layanan & Model Transaksi</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Kategori Layanan</th>
+                    <th>Detail Jasa</th>
+                    <th>Metode Pembayaran</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Akademik</strong></td>
+                    <td>Mentoring 1-on-1 via Zoom (Bimbingan Skripsi/Tesis)</td>
+                    <td>Midtrans Payment Link (Fixed Price)</td>
+                </tr>
+                <tr>
+                    <td><strong>Event</strong></td>
+                    <td>MC Pernikahan (Wedding) & Lamaran (Engagement)</td>
+                    <td>WhatsApp Inquiry (Custom Price)</td>
+                </tr>
+                <tr>
+                    <td><strong>Riset</strong></td>
+                    <td>Asisten Proyek Riset & Penulisan Hukum</td>
+                    <td>WhatsApp Inquiry (Custom Price)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>4. Spesifikasi Teknis (MVP Stage)</h2>
+        <div class="tech-box">
+            <strong>Arsitektur:</strong> Static Site (No Database) untuk performa & SEO maksimal.
+        </div>
+        <ul>
+            <li><strong>Framework:</strong> Next.js (Static Export) atau Astro.</li>
+            <li><strong>Styling:</strong> Tailwind CSS.</li>
+            <li><strong>Payment:</strong> Midtrans Payment Link (Integrasi tanpa API backend).</li>
+            <li><strong>Form:</strong> Formspree / WhatsApp API (Handling input tanpa DB).</li>
+            <li><strong>Hosting:</strong> Vercel atau Netlify.</li>
+        </ul>
+
+        <h2>5. Alur Kerja Pembayaran (No-DB Flow)</h2>
+        <ol>
+            <li>User memilih paket Mentoring di website.</li>
+            <li>User klik tombol "Bayar", diarahkan ke <strong>Midtrans Payment Link</strong> resmi.</li>
+            <li>User menyelesaikan pembayaran.</li>
+            <li>Pemilik website menerima email notifikasi sukses dari Midtrans.</li>
+            <li>Pemilik menghubungi user secara manual via WhatsApp untuk konfirmasi jadwal Zoom.</li>
+        </ol>
+
+        <h2>6. Kebutuhan Visual</h2>
+        <ul>
+            <li>Visualisasi Skill menggunakan progress bar (Communication, Analytical, Legal Writing).</li>
+            <li>Sticky WhatsApp Button di pojok kanan bawah.</li>
+            <li>Typography bersih (Sans-serif) untuk kesan modern dan kredibel.</li>
+        </ul>
+
+        <p style="margin-top: 40px; font-size: 9pt; text-align: center; color: #95a5a6;">
+            Disiapkan untuk: Antigravity Team | Tanggal: April 2026
+        </p>
+    </div>
+</body>
+</html>
+"""
+
+# Convert to PDF using WeasyPrint
+HTML(string=html_content).write_pdf("PRD_Final_Personal_Branding_Lia_Fauziyyah.pdf")
