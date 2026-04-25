@@ -21,10 +21,15 @@ export const metadata: Metadata = {
   description: "Portofolio profesional Lia Fauziyyah A., S.H., M.H. - Seorang akademisi hukum, MC profesional, dan research assistant yang berdedikasi melayani jasa mentoring skripsi, MC wedding, dan riset hukum.",
   keywords: ["Lia Fauziyyah", "Akademisi Hukum", "MC Pernikahan", "Research Assistant", "Mentoring Skripsi", "Hukum Indonesia", "MC Profesional"],
   authors: [{ name: "Lia Fauziyyah A." }],
+  icons: {
+    icon: '/images/favicon.ico',
+    shortcut: '/images/favicon-32x32.png',
+    apple: '/images/apple-touch-icon.png',
+  },
   openGraph: {
     title: "Lia Fauziyyah A., S.H., M.H. | Akademisi, MC, & Research Assistant",
     description: "Portofolio profesional Lia Fauziyyah A., S.H., M.H. - Dedikasi dalam Hukum dan Komunikasi.",
-    url: "https://liafauziyyah.com",
+    url: "https://id.linkedin.com/in/lia-fauziyyah-ahmad-625a89155",
     siteName: "Lia Fauziyyah Portfolio",
     locale: "id_ID",
     type: "website",
