@@ -68,7 +68,7 @@ const About = () => {
                         <div className="mt-10 grid grid-cols-2 gap-6 border-t border-border pt-8">
                             <div>
                                 <dt className="text-xs uppercase tracking-widest text-foreground/40 font-bold mb-1">Education</dt>
-                                <dd className="font-bold">S1 & S2 Hukum</dd>
+                                <dd className="font-bold">S1 Hukum & S2 Hukum Keluarga</dd>
                             </div>
                             <div>
                                 <dt className="text-xs uppercase tracking-widest text-foreground/40 font-bold mb-1">Based In</dt>

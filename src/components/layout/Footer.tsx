@@ -25,7 +25,7 @@ const Footer = () => {
 
                 <div className="border-t mt-10 pt-6 flex flex-col md:flex-row justify-between items-center text-xs text-foreground/40">
                     <p>© {new Date().getFullYear()} Lia Fauziyyah A., S.H., M.H. All rights reserved.</p>
-                    <p className="mt-2 md:mt-0">Designed for Professionalism & Excellence</p>
+                    <p className="mt-2 md:mt-0">Made with ❤️ by <Link href="https://ismitch.web.id" target="_blank" className="hover:text-primary transition-colors">ismitch.web.id</Link></p>
                 </div>
             </div>
         </footer>

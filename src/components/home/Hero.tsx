@@ -66,7 +66,7 @@ const Hero = () => {
                                     src="/images/profile.jpg" // Ganti dengan path foto asli Anda
                                     alt="Lia Fauziyyah"
                                     fill
-                                    className="object-cover opacity-50 contrast-100"
+                                    className="object-cover contrast-100"
                                 />
                                 <div className="absolute inset-0 flex items-center justify-center bg-black/10 dark:bg-black/20 text-white/40 text-[10px] text-center p-4 uppercase tracking-widest font-bold">
 
@@ -81,7 +81,7 @@ const Hero = () => {
                             transition={{ delay: 1, duration: 0.5 }}
                             className="absolute -bottom-6 -left-6 bg-card p-4 rounded-xl shadow-xl border border-border"
                         >
-                            <div className="text-2xl font-bold text-primary leading-none">S2 Hukum</div>
+                            <div className="text-2xl font-bold text-primary leading-none">S2 Hukum Keluarga</div>
                             <div className="text-[10px] text-foreground/60 uppercase tracking-widest font-bold mt-1">Lulusan Terbaik</div>
                         </motion.div>
 
@@ -92,7 +92,7 @@ const Hero = () => {
                             className="absolute -top-6 -right-6 bg-card p-4 rounded-xl shadow-xl border border-border"
                         >
                             <div className="text-2xl font-bold text-accent leading-none">MC</div>
-                            <div className="text-[10px] text-foreground/60 uppercase tracking-widest font-bold mt-1">100+ Events</div>
+                            <div className="text-[10px] text-foreground/60 uppercase tracking-widest font-bold mt-1">10+ Events</div>
                         </motion.div>
                     </div>
                 </motion.div>

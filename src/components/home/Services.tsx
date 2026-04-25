@@ -9,7 +9,7 @@ const services = [
         title: "Mentoring Akademik",
         description: "Bimbingan 1-on-1 via Zoom untuk penulisan Skripsi dan Tesis hukum.",
         icon: <BookOpen className="text-primary" size={32} />,
-        price: "Mulai Rp 150.000",
+        price: "Mulai Rp 100.000",
         features: ["Review Draft Skripsi/Tesis", "Tips Metodologi Penelitian", "Sesi Konsultasi 60 Menit", "Feedback via Email"],
         cta: "Daftar Mentoring (WA)",
         href: "https://wa.me/6283891799266?text=Halo%20Lia,%20saya%20ingin%20daftar%20mentoring", // Updated to WA
